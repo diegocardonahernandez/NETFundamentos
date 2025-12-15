@@ -28,8 +28,23 @@ namespace WinFormsApp1
             int color1 = int.Parse(this.txtRojo.Text);
             int color2 = int.Parse(this.txtVerde.Text);
             int color3 = int.Parse(this.txtAzul.Text);
+            if(color1 < 0 || color1 > 255)
+            {
+                MessageBox.Show("El valor debe estar comprendido entre 0 y 255");
+            }
+            else if(color2 < 0 || color2 > 255)
+            {
+                MessageBox.Show("El  valor debe estae comprendido entre 0 y 255");
+            }
+            else if (color3 < 0 || color2 > 255)
+            {
+                MessageBox.Show("El  valor debe estae comprendido entre 0 y 255");
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(color1, color2, color3);
+            }
 
-            this.BackColor = Color.FromArgb(color1, color2, color3);
 
 
         }
